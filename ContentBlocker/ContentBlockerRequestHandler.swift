@@ -12,15 +12,15 @@ import MobileCoreServices
 class ContentBlockerRequestHandler: NSObject, NSExtensionRequestHandling {
 
     func beginRequest(with context: NSExtensionContext) {
-      
-//        let attachment1 = NSItemProvider(contentsOf: Bundle.main.url(forResource: "blockerList", withExtension: "json"))!
-        let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("custom.json")
-        let attachment2 = NSItemProvider(contentsOf: fileURL)!
-        print(attachment2)
+      let fileManager = FileManager.default
+      if let directory = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "group.PornBlocker") {
+        let fileURL = directory.appendingPathComponent("custom.json")
+        let attachment = NSItemProvider(contentsOf: fileURL)!
         let item = NSExtensionItem()
-        item.attachments = [attachment2]
+        item.attachments = [attachment]
         
         context.completeRequest(returningItems: [item], completionHandler: nil)
+      }
     }
     
 }

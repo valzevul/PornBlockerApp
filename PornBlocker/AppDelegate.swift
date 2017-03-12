@@ -15,9 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    let reloader = RestrictionsFetcher()
-    reloader.getNewFiles()
-    
+    URLCache.shared = URLCache(memoryCapacity: 0, diskCapacity: 0, diskPath: nil)
     return true
   }
 

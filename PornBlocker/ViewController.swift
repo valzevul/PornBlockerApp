@@ -29,7 +29,8 @@ class ViewController: UIViewController {
 
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    
+    let reloader = RestrictionsFetcher()
+    reloader.getNewFiles()
     // Hide the navigation bar on the this view controller
     self.navigationController?.setNavigationBarHidden(true, animated: animated)
   }

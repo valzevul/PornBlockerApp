@@ -26,12 +26,16 @@ class RestrictionsFetcher {
             print("Array to JSON conversion failed: \(error.localizedDescription)")
           }
           
-          let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("custom.json")
-          
-          do {
-            try jsonData.write(to: fileURL, options: .atomic)
-          } catch {
-            print(error)
+          let fileManager = FileManager.default
+          if let directory = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "group.PornBlocker") {
+            let fileURL = directory.appendingPathComponent("custom.json")
+            
+            do {
+              try jsonData.write(to: fileURL, options: .atomic)
+              URLCache.shared.removeAllCachedResponses()
+            } catch {
+              print(error)
+            }
           }
           
           SFContentBlockerManager.reloadContentBlocker(withIdentifier: self.id) { error in
@@ -46,14 +50,16 @@ class RestrictionsFetcher {
   }
   
   func testReading() {
-    let url = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("custom.json")
-    let jsonData = try! Data(contentsOf: url, options: .mappedIfSafe)
-    do {
-      if let jsonResult = try JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization.ReadingOptions(rawValue: 0)) as? NSArray {
-        print(jsonResult)
+    if let file = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.PornBlocker") {
+      let fileURL = file.appendingPathComponent("custom.json")
+      let jsonData = try! Data(contentsOf: fileURL, options: .mappedIfSafe)
+      do {
+        if let jsonResult = try JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization.ReadingOptions(rawValue: 0)) as? NSArray {
+          print(jsonResult)
+        }
+      } catch let error as NSError {
+        print("Error: \(error)")
       }
-    } catch let error as NSError {
-      print("Error: \(error)")
     }
   }
 }
