@@ -19,6 +19,7 @@
 		8222FD911E756DA200C3E24C /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8222FD901E756DA200C3E24C /* HelpViewController.swift */; };
 		8222FD931E756DFF00C3E24C /* HelpParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8222FD921E756DFF00C3E24C /* HelpParser.swift */; };
 		8222FD951E756E7F00C3E24C /* Helps.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8222FD941E756E7F00C3E24C /* Helps.plist */; };
+		82AAB63C1E75F91100FC2DF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82AAB63B1E75F91100FC2DF1 /* GoogleService-Info.plist */; };
 		82B23EAC1E7570280004A659 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B23EAB1E7570280004A659 /* Constants.swift */; };
 		82B23EB71E75710A0004A659 /* RoundedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B23EAD1E75710A0004A659 /* RoundedTableViewCell.swift */; };
 		82B23EB81E75710A0004A659 /* PlainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B23EAF1E75710A0004A659 /* PlainTableViewCell.swift */; };
@@ -27,6 +28,7 @@
 		82B23EBB1E75710A0004A659 /* InfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82B23EB31E75710A0004A659 /* InfoTableViewCell.xib */; };
 		82B23EBC1E75710A0004A659 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B23EB51E75710A0004A659 /* ImageTableViewCell.swift */; };
 		82B23EBD1E75710A0004A659 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82B23EB61E75710A0004A659 /* ImageTableViewCell.xib */; };
+		B15D58C683518A67FF1B76ED /* Pods_PornBlocker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206D11D0FE0C7720469C0064 /* Pods_PornBlocker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		206D11D0FE0C7720469C0064 /* Pods_PornBlocker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PornBlocker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8200C24B1E75973100A4CBEA /* RestrictionsFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestrictionsFetcher.swift; sourceTree = "<group>"; };
 		8222FD691E755F0200C3E24C /* PornBlocker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PornBlocker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8222FD6C1E755F0200C3E24C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +72,7 @@
 		8222FD901E756DA200C3E24C /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		8222FD921E756DFF00C3E24C /* HelpParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpParser.swift; sourceTree = "<group>"; };
 		8222FD941E756E7F00C3E24C /* Helps.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Helps.plist; sourceTree = "<group>"; };
+		82AAB63B1E75F91100FC2DF1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		82B23EAB1E7570280004A659 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		82B23EAD1E75710A0004A659 /* RoundedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedTableViewCell.swift; sourceTree = "<group>"; };
 		82B23EAF1E75710A0004A659 /* PlainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlainTableViewCell.swift; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 		82B23EB61E75710A0004A659 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
 		82D195CE1E75F16D00F06EB4 /* ContentBlocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ContentBlocker.entitlements; sourceTree = "<group>"; };
 		82D195CF1E75F19A00F06EB4 /* PornBlocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PornBlocker.entitlements; sourceTree = "<group>"; };
+		ABF4D0E2556C57AF7F0C40CB /* Pods-PornBlocker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PornBlocker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PornBlocker/Pods-PornBlocker.debug.xcconfig"; sourceTree = "<group>"; };
+		EBDC71B284D78D6FA15354B7 /* Pods-PornBlocker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PornBlocker.release.xcconfig"; path = "Pods/Target Support Files/Pods-PornBlocker/Pods-PornBlocker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B15D58C683518A67FF1B76ED /* Pods_PornBlocker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,12 +106,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BB877B92D508248A983D9B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				206D11D0FE0C7720469C0064 /* Pods_PornBlocker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8222FD601E755F0200C3E24C = {
 			isa = PBXGroup;
 			children = (
 				8222FD6B1E755F0200C3E24C /* PornBlocker */,
 				8222FD831E755F2600C3E24C /* ContentBlocker */,
 				8222FD6A1E755F0200C3E24C /* Products */,
+				BC95CC2ABE4A6359A8ED6BD0 /* Pods */,
+				0BB877B92D508248A983D9B9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +160,7 @@
 		8222FD961E756F7B00C3E24C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				82AAB63B1E75F91100FC2DF1 /* GoogleService-Info.plist */,
 				8222FD6C1E755F0200C3E24C /* AppDelegate.swift */,
 				8200C24B1E75973100A4CBEA /* RestrictionsFetcher.swift */,
 				8222FD941E756E7F00C3E24C /* Helps.plist */,
@@ -194,6 +212,15 @@
 			path = ImageTableViewCell;
 			sourceTree = "<group>";
 		};
+		BC95CC2ABE4A6359A8ED6BD0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ABF4D0E2556C57AF7F0C40CB /* Pods-PornBlocker.debug.xcconfig */,
+				EBDC71B284D78D6FA15354B7 /* Pods-PornBlocker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -201,10 +228,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8222FD7B1E755F0200C3E24C /* Build configuration list for PBXNativeTarget "PornBlocker" */;
 			buildPhases = (
+				883272E7E951C1FA05BBAE6B /* [CP] Check Pods Manifest.lock */,
 				8222FD651E755F0200C3E24C /* Sources */,
 				8222FD661E755F0200C3E24C /* Frameworks */,
 				8222FD671E755F0200C3E24C /* Resources */,
 				8222FD8F1E755F2600C3E24C /* Embed App Extensions */,
+				C428B44C3293EEB1D75916D0 /* [CP] Embed Pods Frameworks */,
+				B205EB5C14E82ED9F590164E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,7 +275,7 @@
 				TargetAttributes = {
 					8222FD681E755F0200C3E24C = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = X72G5VQBS8;
+						DevelopmentTeam = H523SXXDH9;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -255,7 +285,7 @@
 					};
 					8222FD811E755F2600C3E24C = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = X72G5VQBS8;
+						DevelopmentTeam = H523SXXDH9;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
@@ -292,6 +322,7 @@
 				82B23EBD1E75710A0004A659 /* ImageTableViewCell.xib in Resources */,
 				8222FD771E755F0200C3E24C /* LaunchScreen.storyboard in Resources */,
 				82B23EBB1E75710A0004A659 /* InfoTableViewCell.xib in Resources */,
+				82AAB63C1E75F91100FC2DF1 /* GoogleService-Info.plist in Resources */,
 				8222FD951E756E7F00C3E24C /* Helps.plist in Resources */,
 				8222FD741E755F0200C3E24C /* Assets.xcassets in Resources */,
 				8222FD721E755F0200C3E24C /* Main.storyboard in Resources */,
@@ -308,6 +339,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		883272E7E951C1FA05BBAE6B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B205EB5C14E82ED9F590164E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PornBlocker/Pods-PornBlocker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C428B44C3293EEB1D75916D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PornBlocker/Pods-PornBlocker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8222FD651E755F0200C3E24C /* Sources */ = {
@@ -460,14 +539,15 @@
 		};
 		8222FD7C1E755F0200C3E24C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABF4D0E2556C57AF7F0C40CB /* Pods-PornBlocker.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PornBlocker/PornBlocker.entitlements;
-				DEVELOPMENT_TEAM = X72G5VQBS8;
+				DEVELOPMENT_TEAM = H523SXXDH9;
 				INFOPLIST_FILE = PornBlocker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.drobinin.PornBlocker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.etrainmobilegames.pornblocker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -475,14 +555,15 @@
 		};
 		8222FD7D1E755F0200C3E24C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBDC71B284D78D6FA15354B7 /* Pods-PornBlocker.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = PornBlocker/PornBlocker.entitlements;
-				DEVELOPMENT_TEAM = X72G5VQBS8;
+				DEVELOPMENT_TEAM = H523SXXDH9;
 				INFOPLIST_FILE = PornBlocker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.drobinin.PornBlocker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.etrainmobilegames.pornblocker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -493,10 +574,10 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_ENTITLEMENTS = ContentBlocker/ContentBlocker.entitlements;
-				DEVELOPMENT_TEAM = X72G5VQBS8;
+				DEVELOPMENT_TEAM = H523SXXDH9;
 				INFOPLIST_FILE = ContentBlocker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.drobinin.PornBlocker.ContentBlocker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.etrainmobilegames.pornblocker.ContentBlocker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -508,10 +589,10 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CODE_SIGN_ENTITLEMENTS = ContentBlocker/ContentBlocker.entitlements;
-				DEVELOPMENT_TEAM = X72G5VQBS8;
+				DEVELOPMENT_TEAM = H523SXXDH9;
 				INFOPLIST_FILE = ContentBlocker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.drobinin.PornBlocker.ContentBlocker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.etrainmobilegames.pornblocker.ContentBlocker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;

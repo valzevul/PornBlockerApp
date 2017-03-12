@@ -11,7 +11,7 @@ import SafariServices
 
 class RestrictionsFetcher {
   
-  let id = "com.drobinin.PornBlocker.ContentBlocker"
+  let id = "com.etrainmobilegames.pornblocker"
   
   func getNewFiles() {
     let url = "http://q2mobilelabs.com/blocker/blockerList.json"
@@ -27,7 +27,7 @@ class RestrictionsFetcher {
           }
           
           let fileManager = FileManager.default
-          if let directory = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "group.PornBlocker") {
+          if let directory = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "group.com.etrainmobilegames.pornblocker") {
             let fileURL = directory.appendingPathComponent("custom.json")
             
             do {
@@ -50,7 +50,7 @@ class RestrictionsFetcher {
   }
   
   func testReading() {
-    if let file = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.PornBlocker") {
+    if let file = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: "group.com.etrainmobilegames.pornblocker") {
       let fileURL = file.appendingPathComponent("custom.json")
       let jsonData = try! Data(contentsOf: fileURL, options: .mappedIfSafe)
       do {

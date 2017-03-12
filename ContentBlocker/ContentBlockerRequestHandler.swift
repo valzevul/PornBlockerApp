@@ -13,7 +13,7 @@ class ContentBlockerRequestHandler: NSObject, NSExtensionRequestHandling {
 
     func beginRequest(with context: NSExtensionContext) {
       let fileManager = FileManager.default
-      if let directory = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "group.PornBlocker") {
+      if let directory = fileManager.containerURL(forSecurityApplicationGroupIdentifier: "group.com.etrainmobilegames.pornblocker") {
         let fileURL = directory.appendingPathComponent("custom.json")
         let attachment = NSItemProvider(contentsOf: fileURL)!
         let item = NSExtensionItem()
