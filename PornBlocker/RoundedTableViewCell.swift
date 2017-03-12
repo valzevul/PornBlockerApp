@@ -13,7 +13,12 @@ enum RoundedType {
 }
 
 class RoundedTableViewCell: UITableViewCell {
-    
+  
+  var isWhite = false {
+    didSet {
+      updateRoundShape()
+    }
+  }
     var roundedType: RoundedType = .none {
         didSet {
             updateRoundShape()
@@ -30,7 +35,7 @@ class RoundedTableViewCell: UITableViewCell {
     fileprivate let selectionShape: CAShapeLayer = CAShapeLayer()
     
     override func awakeFromNib() {
-        self.layer.addSublayer(shape)
+        self.layer.insertSublayer(shape, at: 0)
         
         self.selectedBackgroundView = UIView()
         self.selectedBackgroundView?.backgroundColor = UIColor.contentSeperatorsSelectionColor
@@ -45,14 +50,15 @@ class RoundedTableViewCell: UITableViewCell {
 // MARK: - Round shape
 
 extension RoundedTableViewCell {
-    func updateRoundShape() {
+  func updateRoundShape() {
         var path: UIBezierPath
         
         let frameSpace = CGRect(x: Apperance.defaultSpace, y: 0, width: self.frame.width - Apperance.defaultSpace * 2, height: self.frame.height)
         path = UIBezierPath(roundedRect: frameSpace, byRoundingCorners: cornersType, cornerRadii: CGSize(width: Apperance.defaultCornerRadius, height: Apperance.defaultCornerRadius))
         
         shape.path = path.cgPath
-        shape.fillColor = UIColor.clear.cgColor
+        shape.fillColor = isWhite ? UIColor.white.cgColor : UIColor.black.cgColor
+        shape.opacity = 0.8
         shape.strokeColor = UIColor.contentSeperatorsColor.cgColor
         
         selectionShape.path = path.cgPath

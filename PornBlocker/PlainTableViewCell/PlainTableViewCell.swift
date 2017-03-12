@@ -27,12 +27,13 @@ class PlainTableViewCell: RoundedTableViewCell {
     @IBOutlet weak var accessorizeRightConstraint: NSLayoutConstraint!
     
     override func prepareForReuse() {
-        nameLabel.textColor = UIColor.contentElementsColor
+        nameLabel.textColor = UIColor.white
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         setOpened(false, animated: false)
+        isWhite = false
     }
     
     var selectionEnable: Bool = false {

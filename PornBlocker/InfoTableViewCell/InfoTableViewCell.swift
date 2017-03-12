@@ -63,5 +63,9 @@ class InfoTableViewCell: RoundedTableViewCell {
         
         infoDescriptionLabel.attributedText = mutableString
     }
-    
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    isWhite = true
+  }
 }

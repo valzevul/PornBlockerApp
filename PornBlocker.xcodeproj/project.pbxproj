@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8200C24C1E75973100A4CBEA /* RestrictionsFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8200C24B1E75973100A4CBEA /* RestrictionsFetcher.swift */; };
 		8222FD6D1E755F0200C3E24C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8222FD6C1E755F0200C3E24C /* AppDelegate.swift */; };
 		8222FD6F1E755F0200C3E24C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8222FD6E1E755F0200C3E24C /* ViewController.swift */; };
 		8222FD721E755F0200C3E24C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8222FD701E755F0200C3E24C /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8200C24B1E75973100A4CBEA /* RestrictionsFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestrictionsFetcher.swift; sourceTree = "<group>"; };
 		8222FD691E755F0200C3E24C /* PornBlocker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PornBlocker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8222FD6C1E755F0200C3E24C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8222FD6E1E755F0200C3E24C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				8222FD6C1E755F0200C3E24C /* AppDelegate.swift */,
+				8200C24B1E75973100A4CBEA /* RestrictionsFetcher.swift */,
 				8222FD941E756E7F00C3E24C /* Helps.plist */,
 				8222FD731E755F0200C3E24C /* Assets.xcassets */,
 				8222FD751E755F0200C3E24C /* LaunchScreen.storyboard */,
@@ -301,6 +304,7 @@
 				82B23EBA1E75710A0004A659 /* InfoTableViewCell.swift in Sources */,
 				8222FD6F1E755F0200C3E24C /* ViewController.swift in Sources */,
 				82B23EBC1E75710A0004A659 /* ImageTableViewCell.swift in Sources */,
+				8200C24C1E75973100A4CBEA /* RestrictionsFetcher.swift in Sources */,
 				8222FD931E756DFF00C3E24C /* HelpParser.swift in Sources */,
 				82B23EB81E75710A0004A659 /* PlainTableViewCell.swift in Sources */,
 				8222FD911E756DA200C3E24C /* HelpViewController.swift in Sources */,

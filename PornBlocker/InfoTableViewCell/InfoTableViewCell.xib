@@ -13,7 +13,7 @@
             <rect key="frame" x="0.0" y="0.0" width="590" height="91"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="590" height="90"/>
+                <frame key="frameInset" width="590" height="91"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tv_accessorize" translatesAutoresizingMaskIntoConstraints="NO" id="5Wb-GY-lrZ">
@@ -52,7 +52,7 @@
                         </variation>
                     </label>
                 </subviews>
-                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="5Wb-GY-lrZ" firstAttribute="leading" secondItem="Oh5-E3-Kmv" secondAttribute="trailing" constant="8" id="3yW-yn-3ip"/>
                     <constraint firstAttribute="trailingMargin" secondItem="5Wb-GY-lrZ" secondAttribute="trailing" constant="8" id="BP3-7d-DKZ"/>
