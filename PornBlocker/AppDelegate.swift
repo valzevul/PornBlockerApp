@@ -7,15 +7,19 @@
 //
 
 import UIKit
+import SafariServices
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
-
+  let id = "com.drobinin.PornBlocker.ContentBlocker"
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
+    SFContentBlockerManager.reloadContentBlocker(withIdentifier: id) { error in
+      print(error)
+    }
     return true
   }
 
