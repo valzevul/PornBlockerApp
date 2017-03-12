@@ -12,7 +12,45 @@
 		8222FD721E755F0200C3E24C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8222FD701E755F0200C3E24C /* Main.storyboard */; };
 		8222FD741E755F0200C3E24C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8222FD731E755F0200C3E24C /* Assets.xcassets */; };
 		8222FD771E755F0200C3E24C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8222FD751E755F0200C3E24C /* LaunchScreen.storyboard */; };
+		8222FD851E755F2600C3E24C /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 8222FD841E755F2600C3E24C /* blockerList.json */; };
+		8222FD871E755F2600C3E24C /* ContentBlockerRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8222FD861E755F2600C3E24C /* ContentBlockerRequestHandler.swift */; };
+		8222FD8B1E755F2600C3E24C /* ContentBlocker.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8222FD821E755F2600C3E24C /* ContentBlocker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8222FD911E756DA200C3E24C /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8222FD901E756DA200C3E24C /* HelpViewController.swift */; };
+		8222FD931E756DFF00C3E24C /* HelpParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8222FD921E756DFF00C3E24C /* HelpParser.swift */; };
+		8222FD951E756E7F00C3E24C /* Helps.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8222FD941E756E7F00C3E24C /* Helps.plist */; };
+		82B23EAC1E7570280004A659 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B23EAB1E7570280004A659 /* Constants.swift */; };
+		82B23EB71E75710A0004A659 /* RoundedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B23EAD1E75710A0004A659 /* RoundedTableViewCell.swift */; };
+		82B23EB81E75710A0004A659 /* PlainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B23EAF1E75710A0004A659 /* PlainTableViewCell.swift */; };
+		82B23EB91E75710A0004A659 /* PlainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82B23EB01E75710A0004A659 /* PlainTableViewCell.xib */; };
+		82B23EBA1E75710A0004A659 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B23EB21E75710A0004A659 /* InfoTableViewCell.swift */; };
+		82B23EBB1E75710A0004A659 /* InfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82B23EB31E75710A0004A659 /* InfoTableViewCell.xib */; };
+		82B23EBC1E75710A0004A659 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B23EB51E75710A0004A659 /* ImageTableViewCell.swift */; };
+		82B23EBD1E75710A0004A659 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82B23EB61E75710A0004A659 /* ImageTableViewCell.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8222FD891E755F2600C3E24C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8222FD611E755F0200C3E24C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8222FD811E755F2600C3E24C;
+			remoteInfo = ContentBlocker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8222FD8F1E755F2600C3E24C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8222FD8B1E755F2600C3E24C /* ContentBlocker.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8222FD691E755F0200C3E24C /* PornBlocker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PornBlocker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +60,32 @@
 		8222FD731E755F0200C3E24C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8222FD761E755F0200C3E24C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8222FD781E755F0200C3E24C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8222FD821E755F2600C3E24C /* ContentBlocker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ContentBlocker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8222FD841E755F2600C3E24C /* blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
+		8222FD861E755F2600C3E24C /* ContentBlockerRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockerRequestHandler.swift; sourceTree = "<group>"; };
+		8222FD881E755F2600C3E24C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8222FD901E756DA200C3E24C /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		8222FD921E756DFF00C3E24C /* HelpParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpParser.swift; sourceTree = "<group>"; };
+		8222FD941E756E7F00C3E24C /* Helps.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Helps.plist; sourceTree = "<group>"; };
+		82B23EAB1E7570280004A659 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		82B23EAD1E75710A0004A659 /* RoundedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedTableViewCell.swift; sourceTree = "<group>"; };
+		82B23EAF1E75710A0004A659 /* PlainTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlainTableViewCell.swift; sourceTree = "<group>"; };
+		82B23EB01E75710A0004A659 /* PlainTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlainTableViewCell.xib; sourceTree = "<group>"; };
+		82B23EB21E75710A0004A659 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
+		82B23EB31E75710A0004A659 /* InfoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoTableViewCell.xib; sourceTree = "<group>"; };
+		82B23EB51E75710A0004A659 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		82B23EB61E75710A0004A659 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8222FD661E755F0200C3E24C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8222FD7F1E755F2600C3E24C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				8222FD6B1E755F0200C3E24C /* PornBlocker */,
+				8222FD831E755F2600C3E24C /* ContentBlocker */,
 				8222FD6A1E755F0200C3E24C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				8222FD691E755F0200C3E24C /* PornBlocker.app */,
+				8222FD821E755F2600C3E24C /* ContentBlocker.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,14 +116,75 @@
 		8222FD6B1E755F0200C3E24C /* PornBlocker */ = {
 			isa = PBXGroup;
 			children = (
-				8222FD6C1E755F0200C3E24C /* AppDelegate.swift */,
+				8222FD961E756F7B00C3E24C /* Resources */,
 				8222FD6E1E755F0200C3E24C /* ViewController.swift */,
 				8222FD701E755F0200C3E24C /* Main.storyboard */,
+				8222FD971E756F8700C3E24C /* HelpViewController */,
+			);
+			path = PornBlocker;
+			sourceTree = "<group>";
+		};
+		8222FD831E755F2600C3E24C /* ContentBlocker */ = {
+			isa = PBXGroup;
+			children = (
+				8222FD841E755F2600C3E24C /* blockerList.json */,
+				8222FD861E755F2600C3E24C /* ContentBlockerRequestHandler.swift */,
+				8222FD881E755F2600C3E24C /* Info.plist */,
+			);
+			path = ContentBlocker;
+			sourceTree = "<group>";
+		};
+		8222FD961E756F7B00C3E24C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8222FD6C1E755F0200C3E24C /* AppDelegate.swift */,
+				8222FD941E756E7F00C3E24C /* Helps.plist */,
 				8222FD731E755F0200C3E24C /* Assets.xcassets */,
 				8222FD751E755F0200C3E24C /* LaunchScreen.storyboard */,
 				8222FD781E755F0200C3E24C /* Info.plist */,
+				82B23EAB1E7570280004A659 /* Constants.swift */,
 			);
-			path = PornBlocker;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		8222FD971E756F8700C3E24C /* HelpViewController */ = {
+			isa = PBXGroup;
+			children = (
+				82B23EAD1E75710A0004A659 /* RoundedTableViewCell.swift */,
+				82B23EAE1E75710A0004A659 /* PlainTableViewCell */,
+				82B23EB11E75710A0004A659 /* InfoTableViewCell */,
+				82B23EB41E75710A0004A659 /* ImageTableViewCell */,
+				8222FD901E756DA200C3E24C /* HelpViewController.swift */,
+				8222FD921E756DFF00C3E24C /* HelpParser.swift */,
+			);
+			name = HelpViewController;
+			sourceTree = "<group>";
+		};
+		82B23EAE1E75710A0004A659 /* PlainTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				82B23EAF1E75710A0004A659 /* PlainTableViewCell.swift */,
+				82B23EB01E75710A0004A659 /* PlainTableViewCell.xib */,
+			);
+			path = PlainTableViewCell;
+			sourceTree = "<group>";
+		};
+		82B23EB11E75710A0004A659 /* InfoTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				82B23EB21E75710A0004A659 /* InfoTableViewCell.swift */,
+				82B23EB31E75710A0004A659 /* InfoTableViewCell.xib */,
+			);
+			path = InfoTableViewCell;
+			sourceTree = "<group>";
+		};
+		82B23EB41E75710A0004A659 /* ImageTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				82B23EB51E75710A0004A659 /* ImageTableViewCell.swift */,
+				82B23EB61E75710A0004A659 /* ImageTableViewCell.xib */,
+			);
+			path = ImageTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,15 +197,34 @@
 				8222FD651E755F0200C3E24C /* Sources */,
 				8222FD661E755F0200C3E24C /* Frameworks */,
 				8222FD671E755F0200C3E24C /* Resources */,
+				8222FD8F1E755F2600C3E24C /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8222FD8A1E755F2600C3E24C /* PBXTargetDependency */,
 			);
 			name = PornBlocker;
 			productName = PornBlocker;
 			productReference = 8222FD691E755F0200C3E24C /* PornBlocker.app */;
 			productType = "com.apple.product-type.application";
+		};
+		8222FD811E755F2600C3E24C /* ContentBlocker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8222FD8C1E755F2600C3E24C /* Build configuration list for PBXNativeTarget "ContentBlocker" */;
+			buildPhases = (
+				8222FD7E1E755F2600C3E24C /* Sources */,
+				8222FD7F1E755F2600C3E24C /* Frameworks */,
+				8222FD801E755F2600C3E24C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ContentBlocker;
+			productName = ContentBlocker;
+			productReference = 8222FD821E755F2600C3E24C /* ContentBlocker.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -95,6 +237,11 @@
 				ORGANIZATIONNAME = "Vadim Drobinin";
 				TargetAttributes = {
 					8222FD681E755F0200C3E24C = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = X72G5VQBS8;
+						ProvisioningStyle = Automatic;
+					};
+					8222FD811E755F2600C3E24C = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = X72G5VQBS8;
 						ProvisioningStyle = Automatic;
@@ -115,6 +262,7 @@
 			projectRoot = "";
 			targets = (
 				8222FD681E755F0200C3E24C /* PornBlocker */,
+				8222FD811E755F2600C3E24C /* ContentBlocker */,
 			);
 		};
 /* End PBXProject section */
@@ -124,9 +272,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82B23EBD1E75710A0004A659 /* ImageTableViewCell.xib in Resources */,
 				8222FD771E755F0200C3E24C /* LaunchScreen.storyboard in Resources */,
+				82B23EBB1E75710A0004A659 /* InfoTableViewCell.xib in Resources */,
+				8222FD951E756E7F00C3E24C /* Helps.plist in Resources */,
 				8222FD741E755F0200C3E24C /* Assets.xcassets in Resources */,
 				8222FD721E755F0200C3E24C /* Main.storyboard in Resources */,
+				82B23EB91E75710A0004A659 /* PlainTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8222FD801E755F2600C3E24C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8222FD851E755F2600C3E24C /* blockerList.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,12 +297,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82B23EAC1E7570280004A659 /* Constants.swift in Sources */,
+				82B23EBA1E75710A0004A659 /* InfoTableViewCell.swift in Sources */,
 				8222FD6F1E755F0200C3E24C /* ViewController.swift in Sources */,
+				82B23EBC1E75710A0004A659 /* ImageTableViewCell.swift in Sources */,
+				8222FD931E756DFF00C3E24C /* HelpParser.swift in Sources */,
+				82B23EB81E75710A0004A659 /* PlainTableViewCell.swift in Sources */,
+				8222FD911E756DA200C3E24C /* HelpViewController.swift in Sources */,
 				8222FD6D1E755F0200C3E24C /* AppDelegate.swift in Sources */,
+				82B23EB71E75710A0004A659 /* RoundedTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8222FD7E1E755F2600C3E24C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8222FD871E755F2600C3E24C /* ContentBlockerRequestHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8222FD8A1E755F2600C3E24C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8222FD811E755F2600C3E24C /* ContentBlocker */;
+			targetProxy = 8222FD891E755F2600C3E24C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8222FD701E755F0200C3E24C /* Main.storyboard */ = {
@@ -260,6 +443,7 @@
 		8222FD7C1E755F0200C3E24C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X72G5VQBS8;
 				INFOPLIST_FILE = PornBlocker/Info.plist;
@@ -273,12 +457,41 @@
 		8222FD7D1E755F0200C3E24C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X72G5VQBS8;
 				INFOPLIST_FILE = PornBlocker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.drobinin.PornBlocker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		8222FD8D1E755F2600C3E24C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEVELOPMENT_TEAM = X72G5VQBS8;
+				INFOPLIST_FILE = ContentBlocker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.drobinin.PornBlocker.ContentBlocker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		8222FD8E1E755F2600C3E24C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEVELOPMENT_TEAM = X72G5VQBS8;
+				INFOPLIST_FILE = ContentBlocker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.drobinin.PornBlocker.ContentBlocker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -302,6 +515,16 @@
 				8222FD7D1E755F0200C3E24C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8222FD8C1E755F2600C3E24C /* Build configuration list for PBXNativeTarget "ContentBlocker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8222FD8D1E755F2600C3E24C /* Debug */,
+				8222FD8E1E755F2600C3E24C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

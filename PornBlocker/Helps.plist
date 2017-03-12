@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Why can I still visit a porn site after I installed Porn Block Plus? </string>
+		<key>description</key>
+		<string>Sorry to hear this! Please make sure you completed all the steps to enable Porn Block Plus in the settings. If this was done, please let us know what site still shows up and we will make sure to add it to our list of sites to be blocked! Email us. </string>
+		<key>helps</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>There is a non-porn site that I cannot visit</string>
+		<key>description</key>
+		<string>Sorry about that! Let us know what site should not be blocked and we will update our filters immediately. </string>
+		<key>helps</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>I can still see porn in my other apps!</string>
+		<key>description</key>
+		<string>Unfortunately, we can only block the porn that shows up in the safari browser. You should delete the other apps that expose you to this type of content.</string>
+		<key>helps</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Porn Blocker Plus is grayed out in the Settings &gt;  Safari &gt; Content Blockers</string>
+		<key>description</key>
+		<string>1. Go to Settings &gt; General &gt; Restrictions. 2.  Disable Restrictions. 3.  Enable Porn Blocker Pro in Settings &gt; Safari &gt; Content Blockers</string>
+		<key>helps</key>
+		<array/>
+	</dict>
+</array>
+</plist>

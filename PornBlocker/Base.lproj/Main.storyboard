@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A319" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8Ty-lf-JL2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PornBlocker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +17,134 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphone_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Thr-RV-Lhk"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="33U-Cq-q5J">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="XNf-JG-d9O"/>
+                                    <constraint firstAttribute="width" constant="180" id="nT1-8X-1RC"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhW-mU-E1T">
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4a1-wL-UOp"/>
+                                </constraints>
+                                <state key="normal" title="Help">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="EXI-BQ-w89" kind="show" id="VG3-UC-nwA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9C-VY-JXT">
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="rkd-i8-SGO"/>
+                                </constraints>
+                                <state key="normal" title="Send Feedback">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendEmailButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i3c-OV-mRy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOS-O1-51m">
+                                <string key="text">In order to use Porn Blocker Plus, please enable Porn Blocker Plus in the Safari Settings.
+
+Navigate to Settings &gt; Safari &gt; Content Blockers.</string>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KhW-mU-E1T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="6ND-7f-88p"/>
+                            <constraint firstItem="33U-Cq-q5J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AFh-6g-CZo"/>
+                            <constraint firstItem="33U-Cq-q5J" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Bqe-GN-lYC"/>
+                            <constraint firstAttribute="trailing" secondItem="Thr-RV-Lhk" secondAttribute="trailing" id="Fjt-Wy-Y9A"/>
+                            <constraint firstAttribute="trailing" secondItem="KhW-mU-E1T" secondAttribute="trailing" constant="20" id="K7q-Ug-GdF"/>
+                            <constraint firstItem="NOS-O1-51m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="MD9-W1-Eb7"/>
+                            <constraint firstItem="Thr-RV-Lhk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MLh-IG-MXn"/>
+                            <constraint firstItem="Thr-RV-Lhk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NHT-KE-58h"/>
+                            <constraint firstAttribute="trailing" secondItem="NOS-O1-51m" secondAttribute="trailing" constant="40" id="cTT-cA-epM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KhW-mU-E1T" secondAttribute="bottom" constant="20" id="gS6-IV-WmS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Thr-RV-Lhk" secondAttribute="bottom" id="gZr-H0-qbl"/>
+                            <constraint firstAttribute="trailing" secondItem="E9C-VY-JXT" secondAttribute="trailing" constant="20" id="lXP-2h-qiV"/>
+                            <constraint firstItem="E9C-VY-JXT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="rgK-OE-ly4"/>
+                            <constraint firstItem="NOS-O1-51m" firstAttribute="top" secondItem="33U-Cq-q5J" secondAttribute="bottom" constant="20" id="vw5-xL-B0p"/>
+                            <constraint firstItem="KhW-mU-E1T" firstAttribute="top" secondItem="E9C-VY-JXT" secondAttribute="bottom" constant="16" id="zWg-Zo-Icq"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="796-7I-pb4"/>
+                    <connections>
+                        <outlet property="feedbackButton" destination="E9C-VY-JXT" id="JkR-RS-rTb"/>
+                        <outlet property="helpButton" destination="KhW-mU-E1T" id="wY6-Ca-JAi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="975.20000000000005" y="37.331334332833585"/>
+        </scene>
+        <!--Porn Blocker Plus Help-->
+        <scene sceneID="U6W-Je-FJe">
+            <objects>
+                <viewController title="Porn Blocker Plus Help" id="EXI-BQ-w89" customClass="HelpViewController" customModule="PornBlocker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HbI-wd-evA"/>
+                        <viewControllerLayoutGuide type="bottom" id="QQB-Fy-bbv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7H8-rk-5mi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphone_bg" translatesAutoresizingMaskIntoConstraints="NO" id="sgA-hB-hHt"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7Gg-rh-VJh">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QQB-Fy-bbv" firstAttribute="top" secondItem="7Gg-rh-VJh" secondAttribute="bottom" id="0Tt-pX-AYq"/>
+                            <constraint firstAttribute="trailing" secondItem="sgA-hB-hHt" secondAttribute="trailing" id="3WB-RF-mUJ"/>
+                            <constraint firstItem="7Gg-rh-VJh" firstAttribute="leading" secondItem="7H8-rk-5mi" secondAttribute="leading" id="6Sn-lr-T25"/>
+                            <constraint firstItem="QQB-Fy-bbv" firstAttribute="top" secondItem="sgA-hB-hHt" secondAttribute="bottom" id="NJM-RP-5Xk"/>
+                            <constraint firstItem="sgA-hB-hHt" firstAttribute="leading" secondItem="7H8-rk-5mi" secondAttribute="leading" id="S7y-5R-mtW"/>
+                            <constraint firstAttribute="trailing" secondItem="7Gg-rh-VJh" secondAttribute="trailing" id="dzY-yZ-Qe6"/>
+                            <constraint firstItem="sgA-hB-hHt" firstAttribute="top" secondItem="HbI-wd-evA" secondAttribute="bottom" id="f8m-za-n4r"/>
+                            <constraint firstItem="7Gg-rh-VJh" firstAttribute="top" secondItem="HbI-wd-evA" secondAttribute="bottom" id="whp-ks-54W"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="7Gg-rh-VJh" id="6zP-89-mTq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kqb-QP-dBC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1820" y="36"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Vp8-XD-Yd5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Ty-lf-JL2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SsF-lk-4D2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NFU-rR-tpa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bB4-YH-AqU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="68" y="36"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iphone_bg" width="750" height="1334"/>
+        <image name="logo" width="1024" height="1024"/>
+    </resources>
 </document>
