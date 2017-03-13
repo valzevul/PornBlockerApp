@@ -5,6 +5,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="MyriadPro-Regular.otf">
+            <string>MyriadPro-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -30,6 +35,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="4a1-wL-UOp"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="17"/>
                                 <state key="normal" title="Help">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -42,6 +48,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="rkd-i8-SGO"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="17"/>
                                 <state key="normal" title="Send Feedback">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -53,7 +60,7 @@
                                 <string key="text">In order to use Porn Blocker Plus, please enable Porn Blocker Plus in the Safari Settings.
 
 Navigate to Settings &gt; Safari &gt; Content Blockers.</string>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -129,7 +136,7 @@ Navigate to Settings &gt; Safari &gt; Content Blockers.</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Ty-lf-JL2" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SsF-lk-4D2">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="SsF-lk-4D2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

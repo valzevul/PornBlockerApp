@@ -28,6 +28,7 @@
 		82B23EBB1E75710A0004A659 /* InfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82B23EB31E75710A0004A659 /* InfoTableViewCell.xib */; };
 		82B23EBC1E75710A0004A659 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B23EB51E75710A0004A659 /* ImageTableViewCell.swift */; };
 		82B23EBD1E75710A0004A659 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82B23EB61E75710A0004A659 /* ImageTableViewCell.xib */; };
+		82DD403C1E77231F0055F705 /* MyriadPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 82DD403B1E77231F0055F705 /* MyriadPro-Regular.otf */; };
 		B15D58C683518A67FF1B76ED /* Pods_PornBlocker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 206D11D0FE0C7720469C0064 /* Pods_PornBlocker.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		82B23EB61E75710A0004A659 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
 		82D195CE1E75F16D00F06EB4 /* ContentBlocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ContentBlocker.entitlements; sourceTree = "<group>"; };
 		82D195CF1E75F19A00F06EB4 /* PornBlocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PornBlocker.entitlements; sourceTree = "<group>"; };
+		82DD403B1E77231F0055F705 /* MyriadPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MyriadPro-Regular.otf"; sourceTree = "<group>"; };
 		ABF4D0E2556C57AF7F0C40CB /* Pods-PornBlocker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PornBlocker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PornBlocker/Pods-PornBlocker.debug.xcconfig"; sourceTree = "<group>"; };
 		EBDC71B284D78D6FA15354B7 /* Pods-PornBlocker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PornBlocker.release.xcconfig"; path = "Pods/Target Support Files/Pods-PornBlocker/Pods-PornBlocker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,6 +142,7 @@
 				82D195CF1E75F19A00F06EB4 /* PornBlocker.entitlements */,
 				8222FD961E756F7B00C3E24C /* Resources */,
 				8222FD6E1E755F0200C3E24C /* ViewController.swift */,
+				82DD403B1E77231F0055F705 /* MyriadPro-Regular.otf */,
 				8222FD701E755F0200C3E24C /* Main.storyboard */,
 				8222FD971E756F8700C3E24C /* HelpViewController */,
 			);
@@ -325,6 +328,7 @@
 				82AAB63C1E75F91100FC2DF1 /* GoogleService-Info.plist in Resources */,
 				8222FD951E756E7F00C3E24C /* Helps.plist in Resources */,
 				8222FD741E755F0200C3E24C /* Assets.xcassets in Resources */,
+				82DD403C1E77231F0055F705 /* MyriadPro-Regular.otf in Resources */,
 				8222FD721E755F0200C3E24C /* Main.storyboard in Resources */,
 				82B23EB91E75710A0004A659 /* PlainTableViewCell.xib in Resources */,
 			);

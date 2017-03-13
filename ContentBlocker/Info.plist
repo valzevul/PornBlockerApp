@@ -18,10 +18,8 @@
 	<string>XPC!</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
-	<key>NSHumanReadableDescription</key>
-	<string>Block adult websites</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2</string>
 	<key>NSExtension</key>
 	<dict>
 		<key>NSExtensionPointIdentifier</key>
@@ -29,5 +27,7 @@
 		<key>NSExtensionPrincipalClass</key>
 		<string>$(PRODUCT_MODULE_NAME).ContentBlockerRequestHandler</string>
 	</dict>
+	<key>NSHumanReadableDescription</key>
+	<string>Block adult websites</string>
 </dict>
 </plist>

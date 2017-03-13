@@ -149,27 +149,27 @@ extension String {
 
 extension UIFont {
   class func appUltraLightFont(_ size: CGFloat) -> UIFont {
-    return UIFont(name: "AvenirNext-UltraLight", size: size) ?? UIFont.systemFont(ofSize: size)
+    return UIFont(name: "MyriadPro-Regular", size: size) ?? UIFont.systemFont(ofSize: size)
   }
   
   class func appRegularFont(_ size: CGFloat) -> UIFont {
-    return UIFont(name: "AvenirNext-Regular", size: size) ?? UIFont.systemFont(ofSize: size)
+    return UIFont(name: "MyriadPro-Regular", size: size) ?? UIFont.systemFont(ofSize: size)
   }
   
   class func appMediumFont(_ size: CGFloat) -> UIFont {
-    return UIFont(name: "AvenirNext-Medium", size: size) ?? UIFont.boldSystemFont(ofSize: size)
+    return UIFont(name: "MyriadPro-Regular", size: size) ?? UIFont.boldSystemFont(ofSize: size)
   }
   
   class func appHeavyFont(_ size: CGFloat) -> UIFont {
-    return UIFont(name: "AvenirNext-Heavy", size: size) ?? UIFont.boldSystemFont(ofSize: size)
+    return UIFont(name: "MyriadPro-Regular", size: size) ?? UIFont.boldSystemFont(ofSize: size)
   }
   
   class func appBoldFont(_ size: CGFloat) -> UIFont {
-    return UIFont(name: "AvenirNext-Bold", size: size) ?? UIFont.boldSystemFont(ofSize: size)
+    return UIFont(name: "MyriadPro-Regular", size: size) ?? UIFont.boldSystemFont(ofSize: size)
   }
   
   class func appDemiBoldFont(_ size: CGFloat) -> UIFont {
-    return UIFont(name: "AvenirNext-DemiBold", size: size) ?? UIFont.boldSystemFont(ofSize: size)
+    return UIFont(name: "MyriadPro-Regular", size: size) ?? UIFont.boldSystemFont(ofSize: size)
   }
   
   class var appDefaultTextFontSize: CGFloat {
