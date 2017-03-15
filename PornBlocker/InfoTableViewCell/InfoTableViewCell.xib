@@ -6,14 +6,19 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="MyriadPro-Regular.otf">
+            <string>MyriadPro-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="91" id="KGk-i7-Jjw" customClass="InfoTableViewCell" customModule="PornBlocker" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="590" height="91"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="145" id="KGk-i7-Jjw" customClass="InfoTableViewCell" customModule="PornBlocker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="590" height="145"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="590" height="91"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="590" height="144"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tv_accessorize" translatesAutoresizingMaskIntoConstraints="NO" id="5Wb-GY-lrZ">
@@ -51,18 +56,32 @@
                             </mask>
                         </variation>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHT-2u-7ZE">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="J1P-Kf-gye"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="14"/>
+                        <state key="normal" title="Email us">
+                            <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="emailUsPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="SWW-HH-szb"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
+                    <constraint firstItem="hHT-2u-7ZE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="2Tq-VI-KOB"/>
                     <constraint firstItem="5Wb-GY-lrZ" firstAttribute="leading" secondItem="Oh5-E3-Kmv" secondAttribute="trailing" constant="8" id="3yW-yn-3ip"/>
                     <constraint firstAttribute="trailingMargin" secondItem="5Wb-GY-lrZ" secondAttribute="trailing" constant="8" id="BP3-7d-DKZ"/>
                     <constraint firstItem="YBE-Ni-2jw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="FJn-tF-0k0"/>
                     <constraint firstAttribute="centerY" secondItem="5Wb-GY-lrZ" secondAttribute="centerY" id="JmZ-zI-10N"/>
                     <constraint firstItem="Oh5-E3-Kmv" firstAttribute="top" secondItem="YBE-Ni-2jw" secondAttribute="bottom" constant="3" id="K4I-tY-tOT"/>
+                    <constraint firstItem="hHT-2u-7ZE" firstAttribute="top" secondItem="Oh5-E3-Kmv" secondAttribute="bottom" constant="8" id="Xc4-se-Xvd"/>
                     <constraint firstItem="5Wb-GY-lrZ" firstAttribute="leading" secondItem="YBE-Ni-2jw" secondAttribute="trailing" constant="8" id="YGI-ZR-gM5"/>
                     <constraint firstItem="Oh5-E3-Kmv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="aOI-4R-vlc"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="hHT-2u-7ZE" secondAttribute="bottom" constant="8" id="aQu-hc-um8"/>
                     <constraint firstItem="YBE-Ni-2jw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="har-gW-LMa"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="Oh5-E3-Kmv" secondAttribute="bottom" constant="8" id="sF1-OB-XOd"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -70,10 +89,11 @@
                 <outlet property="accessorizeImageView" destination="5Wb-GY-lrZ" id="SjG-zp-s3q"/>
                 <outlet property="accessorizeRightConstraint" destination="BP3-7d-DKZ" id="LWR-N8-OOW"/>
                 <outlet property="accessorizeWidthConstraint" destination="wZw-G3-26E" id="nDp-f3-kBk"/>
+                <outlet property="emailUsButton" destination="hHT-2u-7ZE" id="gtr-uW-gaJ"/>
                 <outlet property="infoDescriptionLabel" destination="Oh5-E3-Kmv" id="7bC-8J-sPj"/>
                 <outlet property="nameLabel" destination="YBE-Ni-2jw" id="Vle-Cw-sur"/>
             </connections>
-            <point key="canvasLocation" x="459" y="398.5"/>
+            <point key="canvasLocation" x="459" y="425.5"/>
         </tableViewCell>
     </objects>
     <resources>

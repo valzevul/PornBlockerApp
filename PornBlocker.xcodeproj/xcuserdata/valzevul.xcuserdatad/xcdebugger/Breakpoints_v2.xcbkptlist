@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PornBlocker/HelpViewController.swift"
-            timestampString = "511014426.371064"
+            timestampString = "511271184.798197"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "numberOfSections(in:)"
             landmarkType = "7">
          </BreakpointContent>

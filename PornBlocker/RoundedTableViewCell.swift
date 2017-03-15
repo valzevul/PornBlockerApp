@@ -43,6 +43,7 @@ class RoundedTableViewCell: UITableViewCell {
         
         self.contentView.layoutMargins.left += Apperance.defaultSpace
         self.contentView.layoutMargins.right += Apperance.defaultSpace
+        isOpaque = true
     }
     
 }

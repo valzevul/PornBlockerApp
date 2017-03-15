@@ -7,6 +7,30 @@
 //
 
 import UIKit
+import MessageUI
+
+extension HelpViewController: MFMailComposeViewControllerDelegate {
+  
+  func configuredMailComposeViewController() -> MFMailComposeViewController {
+    let mailComposerVC = MFMailComposeViewController()
+    mailComposerVC.mailComposeDelegate = self
+    
+    mailComposerVC.setToRecipients(["pornblockpro@gmail.com"])
+    mailComposerVC.setSubject("Feedback for Porn Blocker Pro")
+    mailComposerVC.setMessageBody("Write your feedback below this line:", isHTML: false)
+    
+    return mailComposerVC
+  }
+  
+  func showSendMailErrorAlert() {
+    print("Something went wrong!")
+  }
+  
+  // MARK: MFMailComposeViewControllerDelegate
+  func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+    controller.dismiss(animated: true, completion: nil)
+  }
+}
 
 class HelpViewController: UIViewController {
     
@@ -63,7 +87,8 @@ extension HelpViewController: UITableViewDataSource {
     case 0:
       cell = titleCell(tableView, cellForRowAtIndexPath: indexPath)
     case 1:
-      cell = acquiredCell(tableView, cellForRowAtIndexPath: indexPath)
+      let isButton = (indexPath.section == 0) || (indexPath.section == 1)
+      cell = acquiredCell(tableView, cellForRowAtIndexPath: indexPath, isButton: isButton)
     default:
       cell = helpCell(tableView, cellForRowAtIndexPath: indexPath)
     }
@@ -96,13 +121,31 @@ extension HelpViewController {
     return cell
   }
   
-  func acquiredCell(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath) -> RoundedTableViewCell {
+  func buttonClicked() {
+    let mailComposeViewController = configuredMailComposeViewController()
+    if MFMailComposeViewController.canSendMail() {
+      self.present(mailComposeViewController, animated: true, completion: nil)
+    } else {
+      self.showSendMailErrorAlert()
+    }
+  }
+  
+  func acquiredCell(_ tableView: UITableView, cellForRowAtIndexPath indexPath: IndexPath, isButton: Bool) -> RoundedTableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: Constants.infoTableViewCellIdentifier, for: indexPath) as! InfoTableViewCell
-    
+    cell.contentView.isUserInteractionEnabled = false
+    cell.selectionStyle = .none
     cell.selectionEnable = false
     cell.nameLabel.text = "Info"
     cell.infoDescription = Helps[indexPath.section].description
-    
+    if isButton {
+      cell.emailUsButton.isEnabled = true
+      cell.emailUsButton.isHidden = false
+      cell.emailUsButton.tag = indexPath.row
+      cell.emailUsButton.addTarget(self, action: #selector(HelpViewController.buttonClicked), for: UIControlEvents.touchUpInside)
+    } else {
+      cell.emailUsButton.isEnabled = false
+      cell.emailUsButton.isHidden = true
+    }
     return cell
   }
   
@@ -112,7 +155,6 @@ extension HelpViewController {
     cell.nameLabel.text = Helps[indexPath.section].helps[indexPath.row - 2]
     cell.nameLabel.textColor = UIColor.contentAdditionalElementsColor
     cell.selectionEnable = false
-    
     return cell
   }
 }
@@ -122,6 +164,12 @@ extension HelpViewController {
 
 extension HelpViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    if let cell = tableView.cellForRow(at: indexPath) as? InfoTableViewCell {
+      if cell.emailUsButton.isEnabled {
+        buttonClicked()
+      }
+      return
+    }
     
     let cell = tableView.cellForRow(at: indexPath) as! PlainTableViewCell
     

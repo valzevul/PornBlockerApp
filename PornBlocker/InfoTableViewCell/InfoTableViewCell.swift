@@ -7,8 +7,29 @@
 //
 
 import UIKit
+import MessageUI
+
+extension UIView {
+  var parentViewController: UIViewController? {
+    var parentResponder: UIResponder? = self
+    while parentResponder != nil {
+      parentResponder = parentResponder!.next
+      if let viewController = parentResponder as? UIViewController {
+        return viewController
+      }
+    }
+    return nil
+  }
+}
 
 class InfoTableViewCell: RoundedTableViewCell {
+  
+  @IBOutlet weak var emailUsButton: UIButton!
+  
+  @IBAction func emailUsPressed(_ sender: AnyObject) {
+    
+  }
+  
 
     @IBOutlet weak var nameLabel: UILabel! {
         didSet {
@@ -38,22 +59,22 @@ class InfoTableViewCell: RoundedTableViewCell {
     @IBOutlet weak var accessorizeWidthConstraint: NSLayoutConstraint!
     @IBOutlet weak var accessorizeRightConstraint: NSLayoutConstraint!
 
-    var selectionEnable: Bool = false {
+    var selectionEnable: Bool = true {
         didSet {
-            isUserInteractionEnabled = selectionEnable
-            accessorizeImageView.isHidden = !selectionEnable
+//            isUserInteractionEnabled = selectionEnable
+            accessorizeImageView.isHidden = true //!selectionEnable
             updateInfoDescriptionLabel()
             
-            if selectionEnable {
-                accessorizeRightConstraint.constant = 8
-                accessorizeWidthConstraint.constant = 20
-            } else {
+//            if selectionEnable {
+//                accessorizeRightConstraint.constant = 8
+//                accessorizeWidthConstraint.constant = 20
+//            } else {
                 accessorizeRightConstraint.constant = 0
                 accessorizeWidthConstraint.constant = 0
-            }
+//            }
         }
     }
-    
+  
     func updateInfoDescriptionLabel() {
         let mutableString = NSMutableAttributedString(string: infoDescription)
         
