@@ -11,6 +11,58 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Video View Controller-->
+        <scene sceneID="2Z5-Nc-vFI">
+            <objects>
+                <viewController id="y5C-pg-d1A" customClass="VideoViewController" customModule="PornBlocker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qRs-xN-dSq"/>
+                        <viewControllerLayoutGuide type="bottom" id="vH5-aF-ChP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K1w-hc-Eqq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wJT-eR-24a">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To turn on the blocker you have to enable it in Safari settings" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zba-Io-Aok">
+                                <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zzv-p9-iQV">
+                                <fontDescription key="fontDescription" name="MyriadPro-Regular" family="Myriad Pro" pointSize="20"/>
+                                <state key="normal" title="Close tutorial">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonPressed:" destination="y5C-pg-d1A" eventType="touchUpInside" id="Eb9-Yn-Cdh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="zba-Io-Aok" firstAttribute="leading" secondItem="K1w-hc-Eqq" secondAttribute="leading" constant="8" id="2Ve-G4-Dlq"/>
+                            <constraint firstItem="zba-Io-Aok" firstAttribute="centerX" secondItem="K1w-hc-Eqq" secondAttribute="centerX" id="8Yp-m7-ZHE"/>
+                            <constraint firstItem="wJT-eR-24a" firstAttribute="leading" secondItem="K1w-hc-Eqq" secondAttribute="leading" constant="20" id="8Yx-Hb-9vt"/>
+                            <constraint firstItem="vH5-aF-ChP" firstAttribute="top" secondItem="Zzv-p9-iQV" secondAttribute="bottom" constant="20" id="DUs-o8-YDO"/>
+                            <constraint firstAttribute="trailing" secondItem="wJT-eR-24a" secondAttribute="trailing" constant="20" id="IMf-9w-PKh"/>
+                            <constraint firstItem="zba-Io-Aok" firstAttribute="top" secondItem="wJT-eR-24a" secondAttribute="bottom" constant="20" id="OOS-U4-khd"/>
+                            <constraint firstItem="Zzv-p9-iQV" firstAttribute="top" secondItem="zba-Io-Aok" secondAttribute="bottom" constant="20" id="PNQ-30-jDO"/>
+                            <constraint firstItem="Zzv-p9-iQV" firstAttribute="centerX" secondItem="K1w-hc-Eqq" secondAttribute="centerX" id="Tno-1j-pNe"/>
+                            <constraint firstAttribute="trailing" secondItem="zba-Io-Aok" secondAttribute="trailing" constant="8" id="atz-il-mDY"/>
+                            <constraint firstItem="wJT-eR-24a" firstAttribute="top" secondItem="qRs-xN-dSq" secondAttribute="bottom" constant="20" id="nxu-fn-IaA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playerView" destination="wJT-eR-24a" id="UDt-Kz-QRT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UQ7-Lx-KxV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="980" y="-645.42728635682158"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -64,6 +116,15 @@ Navigate to Settings &gt; Safari &gt; Content Blockers.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQb-sA-jSn">
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="17"/>
+                                <state key="normal" title="View Tutorial Video">
+                                    <color key="titleColor" red="0.93725490196078431" green="0.94901960784313721" blue="0.043137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="y5C-pg-d1A" kind="presentation" id="rfe-Sw-rGv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -72,6 +133,7 @@ Navigate to Settings &gt; Safari &gt; Content Blockers.</string>
                             <constraint firstItem="33U-Cq-q5J" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Bqe-GN-lYC"/>
                             <constraint firstAttribute="trailing" secondItem="Thr-RV-Lhk" secondAttribute="trailing" id="Fjt-Wy-Y9A"/>
                             <constraint firstAttribute="trailing" secondItem="KhW-mU-E1T" secondAttribute="trailing" constant="20" id="K7q-Ug-GdF"/>
+                            <constraint firstItem="pQb-sA-jSn" firstAttribute="top" secondItem="NOS-O1-51m" secondAttribute="bottom" constant="25" id="LFy-eV-G7q"/>
                             <constraint firstItem="NOS-O1-51m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="MD9-W1-Eb7"/>
                             <constraint firstItem="Thr-RV-Lhk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MLh-IG-MXn"/>
                             <constraint firstItem="Thr-RV-Lhk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NHT-KE-58h"/>
@@ -79,6 +141,7 @@ Navigate to Settings &gt; Safari &gt; Content Blockers.</string>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="KhW-mU-E1T" secondAttribute="bottom" constant="20" id="gS6-IV-WmS"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Thr-RV-Lhk" secondAttribute="bottom" id="gZr-H0-qbl"/>
                             <constraint firstAttribute="trailing" secondItem="E9C-VY-JXT" secondAttribute="trailing" constant="20" id="lXP-2h-qiV"/>
+                            <constraint firstItem="pQb-sA-jSn" firstAttribute="centerX" secondItem="Thr-RV-Lhk" secondAttribute="centerX" id="lkz-LF-KBO"/>
                             <constraint firstItem="E9C-VY-JXT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="rgK-OE-ly4"/>
                             <constraint firstItem="NOS-O1-51m" firstAttribute="top" secondItem="33U-Cq-q5J" secondAttribute="bottom" constant="20" id="vw5-xL-B0p"/>
                             <constraint firstItem="KhW-mU-E1T" firstAttribute="top" secondItem="E9C-VY-JXT" secondAttribute="bottom" constant="16" id="zWg-Zo-Icq"/>
@@ -136,7 +199,7 @@ Navigate to Settings &gt; Safari &gt; Content Blockers.</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Ty-lf-JL2" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="SsF-lk-4D2">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SsF-lk-4D2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
