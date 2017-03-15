@@ -19,7 +19,7 @@
                         <viewControllerLayoutGuide type="top" id="qRs-xN-dSq"/>
                         <viewControllerLayoutGuide type="bottom" id="vH5-aF-ChP"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="K1w-hc-Eqq">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="K1w-hc-Eqq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -41,7 +41,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.75478916952054798" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="zba-Io-Aok" firstAttribute="leading" secondItem="K1w-hc-Eqq" secondAttribute="leading" constant="8" id="2Ve-G4-Dlq"/>
                             <constraint firstItem="zba-Io-Aok" firstAttribute="centerX" secondItem="K1w-hc-Eqq" secondAttribute="centerX" id="8Yp-m7-ZHE"/>
@@ -122,7 +122,7 @@ Navigate to Settings &gt; Safari &gt; Content Blockers.</string>
                                     <color key="titleColor" red="0.93725490196078431" green="0.94901960784313721" blue="0.043137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="y5C-pg-d1A" kind="presentation" id="rfe-Sw-rGv"/>
+                                    <segue destination="y5C-pg-d1A" kind="presentation" identifier="showTutorial" modalPresentationStyle="overCurrentContext" id="rfe-Sw-rGv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -199,7 +199,7 @@ Navigate to Settings &gt; Safari &gt; Content Blockers.</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Ty-lf-JL2" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SsF-lk-4D2">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="SsF-lk-4D2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

@@ -24,6 +24,10 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    if !UserDefaults.standard.bool(forKey: "notFirstLaunch") {
+      UserDefaults.standard.set(true, forKey: "notFirstLaunch")
+      performSegue(withIdentifier: "showTutorial", sender: nil)
+    }
     // Do any additional setup after loading the view, typically from a nib.
   }
 
@@ -42,13 +46,38 @@ class ViewController: UIViewController {
     self.navigationController?.setNavigationBarHidden(false, animated: animated)
   }
   
-  @IBAction func sendEmailButtonTapped(_ sender: AnyObject) {
+  func sendEmail() {
     let mailComposeViewController = configuredMailComposeViewController()
     if MFMailComposeViewController.canSendMail() {
       self.present(mailComposeViewController, animated: true, completion: nil)
     } else {
       self.showSendMailErrorAlert()
     }
+  }
+  
+  func openAppStore() {
+    let appID = 1214411593
+    let urlStr = "itms-apps://itunes.apple.com/app/viewContentsUserReviews?id=\(appID)"
+    UIApplication.shared.openURL(URL(string: urlStr)!)
+  }
+  
+  @IBAction func sendEmailButtonTapped(_ sender: AnyObject) {
+    let alert = UIAlertController(title: "Send Feedback", message: "Are you happy with Porn Blocker Pro?", preferredStyle: UIAlertControllerStyle.alert)
+    alert.addAction(UIAlertAction(title: "Yes", style: UIAlertActionStyle.cancel, handler: { (action) in
+      if action.style == .cancel {
+        self.openAppStore()
+      } else {
+        self.sendEmail()
+      }
+    }))
+    alert.addAction(UIAlertAction(title: "No", style: UIAlertActionStyle.default, handler: { (action) in
+      if action.style == .cancel {
+        self.openAppStore()
+      } else {
+        self.sendEmail()
+      }
+    }))
+    self.present(alert, animated: true, completion: nil)
   }
   
   override func didReceiveMemoryWarning() {
